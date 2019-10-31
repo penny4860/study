@@ -8,6 +8,13 @@
 * 단축키
     * ```ctrl + alt + o``` : 브라우져에서 실행
 
+## 2. HTML + CSS + Javascript
+
+* CSS 적용방법
+    * head태그에서 적용 : ```<link rel="stylesheet" href="style.css">```
+
+* 자바스크립트 적용방법
+    * 
 
 ## Todo
 

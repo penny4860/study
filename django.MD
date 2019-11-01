@@ -12,7 +12,15 @@
 		* 프로젝트 템플릿파일에서 사용
 	* API endpoint?
 		* [rest](docs/rest.MD)
-		
+    * django 프로젝트의 index page 구현방법
+        * step3 : urls
+            * ```project/urls.py```에서 뷰함수를 mapping
+        * step4 : 뷰
+            * ```project/views.py```에서 뷰 구현
+            * ```class IndexView(TemplateView): template_name="index.html"```
+        * step5 : template
+            * html 구현
+
 * Todo
 
 

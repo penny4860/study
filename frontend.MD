@@ -33,7 +33,7 @@
     * 자바스크립트 : 이벤트함수에서 REST API 를 호출하는 코드 구현
         * ```$.getJSON(url, function(data){...});```
             * function(data) 에 url에서 async하게 가져온 데이터가 저장되어있다.
-        * ```jQuery.ajax()```
+        * ```$.ajax()```
 
 
 

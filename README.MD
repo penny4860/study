@@ -2,6 +2,8 @@
 # Todo
 
 * [Object-Oriented JavaScript](https://www.udacity.com/course/object-oriented-javascript--ud015)
+* [생활코딩 자바스크립트](https://opentutorials.org/course/743)
+* [웹브라우저 자바스크립트](https://opentutorials.org/course/1375)
 * [JavaScript Design Patterns](https://www.udacity.com/course/javascript-design-patterns--ud989)
 * [JavaScript Testing](https://www.udacity.com/course/javascript-testing--ud549)
 * frontend

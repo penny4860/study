@@ -73,3 +73,24 @@ matrix = factory_movie('Matrix');
 ```
 
 
+* immediately-invoked function expressions 
+
+```html
+<body>
+    <button id='button'>Click me!</button>
+    <script>
+        const button = document.getElementById('button');
+        button.addEventListener('click', (function() {
+            // count를 private scope로 보호
+            let count = 0;
+            return function() {
+                count += 1;
+                if (count === 2) {
+                    alert('This alert appears every other press!');
+                    count = 0;
+                }
+            };
+            })());
+    </script>            
+</body>
+```

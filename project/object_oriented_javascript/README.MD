@@ -73,7 +73,7 @@ matrix = factory_movie('Matrix');
 ```
 
 
-* immediately-invoked function expressions 
+* immediately-invoked function expressions : 함수선언과 동시에 함수를 호출
 
 ```html
 <body>
@@ -94,3 +94,19 @@ matrix = factory_movie('Matrix');
     </script>            
 </body>
 ```
+
+## Lecture 3 : Classes and Objects
+
+### Constructor Function 
+
+object를 만들어주는 function을 constructor function이라고 한다.
+
+```javascript
+function SoftwareDeveloper(name) {
+    this.favoriteLanguage = 'JavaScript';
+    this.name = name;
+}
+let instructor = new SoftwareDeveloper('Andrew');
+```
+
+

@@ -52,27 +52,6 @@ const cat = {
     * parent function scope
     * global variable
 
-* closure
-    1) 내부함수가 외부함수의 지역변수에 접근할 수 있음.
-    2) (외부함수의 지역변수를 사용하는 )내부함수가 살아있으면 외부함수도 살아있음.
-
-```javascript
-// closure를 사용한 클래스 구현
-function factory_movie(title){
-    return {
-        get_title : function (){
-            return title;
-        },
-        set_title : function(_title){
-            title = _title
-        }
-    }
-}
-ghost = factory_movie('Ghost in the shell');
-matrix = factory_movie('Matrix');
-```
-
-
 * immediately-invoked function expressions : 함수선언과 동시에 함수를 호출
 
 ```html

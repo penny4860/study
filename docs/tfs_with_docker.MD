@@ -5,6 +5,7 @@
 * docker가 설치되어있는 host computer
 * tensorflow docker image
 	* tensorflow 에서 제공하는 docker image를 pull 받으면 된다.
+	* tensorflow 버전은 도커허브에서 확인.
 * pre-trained 된 모델파일
 	* saved_model 포맷
 

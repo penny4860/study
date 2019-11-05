@@ -52,24 +52,40 @@ const cat = {
     * parent function scope
     * global variable
 
-* closure
-    1) 내부함수가 외부함수의 지역변수에 접근할 수 있음.
-    2) (외부함수의 지역변수를 사용하는 )내부함수가 살아있으면 외부함수도 살아있음.
+* immediately-invoked function expressions : 함수선언과 동시에 함수를 호출
+
+```html
+<body>
+    <button id='button'>Click me!</button>
+    <script>
+        const button = document.getElementById('button');
+        button.addEventListener('click', (function() {
+            // count를 private scope로 보호
+            let count = 0;
+            return function() {
+                count += 1;
+                if (count === 2) {
+                    alert('This alert appears every other press!');
+                    count = 0;
+                }
+            };
+            })());
+    </script>            
+</body>
+```
+
+## Lecture 3 : Classes and Objects
+
+### Constructor Function 
+
+object를 만들어주는 function을 constructor function이라고 한다.
 
 ```javascript
-// closure를 사용한 클래스 구현
-function factory_movie(title){
-    return {
-        get_title : function (){
-            return title;
-        },
-        set_title : function(_title){
-            title = _title
-        }
-    }
+function SoftwareDeveloper(name) {
+    this.favoriteLanguage = 'JavaScript';
+    this.name = name;
 }
-ghost = factory_movie('Ghost in the shell');
-matrix = factory_movie('Matrix');
+let instructor = new SoftwareDeveloper('Andrew');
 ```
 
 

@@ -12,6 +12,10 @@
 
 ## Todo
 
+* http://www.jquerysample.com/
+* https://codepen.io/rajdgreat007/pen/ZpZWbw
+* JavaScript Promises
+* Front-End Frameworks
 
 
 ## Note

@@ -30,22 +30,21 @@ let mobilenet;
 const mobilenetDemo = async () => {
   status('Loading model...');
 
+  // 1. load model
   mobilenet = await tf.loadLayersModel(MOBILENET_MODEL_PATH);
-
-  // Warmup the model. This isn't necessary, but makes the first prediction
-  // faster. Call `dispose` to release the WebGL memory allocated for the return
-  // value of `predict`.
   mobilenet.predict(tf.zeros([1, IMAGE_SIZE, IMAGE_SIZE, 3])).dispose();
 
   status('');
 
-  // Make a prediction through the locally hosted cat.jpg.
+  // 2. predict
   const catElement = document.getElementById('cat');
   if (catElement.complete && catElement.naturalHeight !== 0) {
+    status('1. element loaded');
     predict(catElement);
     catElement.style.display = '';
   } else {
     catElement.onload = () => {
+      status('2. onload()');
       predict(catElement);
       catElement.style.display = '';
     }
@@ -192,3 +191,7 @@ const status = msg => demoStatusElement.innerText = msg;
 const predictionsElement = document.getElementById('predictions');
 
 mobilenetDemo();
+
+
+
+

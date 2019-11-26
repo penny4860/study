@@ -39,12 +39,10 @@ const mobilenetDemo = async () => {
   // 2. predict
   const catElement = document.getElementById('cat');
   if (catElement.complete && catElement.naturalHeight !== 0) {
-    status('1. element loaded');
     predict(catElement);
     catElement.style.display = '';
   } else {
     catElement.onload = () => {
-      status('2. onload()');
       predict(catElement);
       catElement.style.display = '';
     }

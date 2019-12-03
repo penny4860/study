@@ -22,7 +22,7 @@
     * html 문서 : ```{% load staticfiles %}``` 를 문서 상단에 추가
     * javascript 파일경로 : ```"/static/main.js```
 
-## 1. Tensorflow JS 개발환경 구축
+### Tensorflow JS 개발환경 구축
 
 * 개발환경 구축 : visual studio code
     * 확장도구설치

@@ -16,7 +16,7 @@
 	--name serving \
 	-p {grpc포트}:8500 \
 	-p {rest_api포트}:8501 \
-	-v {모델경로}:/model/{모델이름}
+	-v {모델경로}:/models/{모델이름}
 	-e MODEL_NAME={모델이름} \
 	-t \
 	tensorflow/serving:{텐서플로버젼}

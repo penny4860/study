@@ -22,29 +22,6 @@
     * html 문서 : ```{% load staticfiles %}``` 를 문서 상단에 추가
     * javascript 파일경로 : ```"/static/main.js```
 
-### Tensorflow JS 개발환경 구축
-
-* 개발환경 구축 : visual studio code
-    * 확장도구설치
-        * Git Graph
-        * open-in-browser (coderfee)
-        * code runner
-            * ```ctrl + alt + n``` : 자바스크립트만 콘솔에서 실행
-    * 단축키
-        * [문서](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
-        * ```ctrl + alt + o``` : 브라우져에서 실행
-
-* tfjs 개발환경
-    1) 설정파일 복사
-        * .babelrc
-        * package.json
-    2) ```project-root> yarn```
-        * node_modules 디렉토리 생성
-        * ```yarn.lock``` 생성
-    3) 실행 : ```yarn watch```
-        * dist 디렉토리 생성
-        * 로컬 서버에서 웹앱이 실행
-
 ### js 파일을 html과 브라우저 독립적으로 실행하는 방법
 
 * 참고자료 : https://www.daleseo.com/js-babel-node/

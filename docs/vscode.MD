@@ -27,3 +27,55 @@
     * 단어를 블록선택후 ctrl + D
 
 
+## 3. python 개발환경
+
+```project-root/.vscode/settings.json```, ```project-root/.env``` 두가지 파일을 아래와 같이 설정해준다.
+
+
+### 3.1. project-root/.vscode/settings.json
+
+```json
+{
+    "python.pythonPath": "C:\\Users\\jeongjoonsup\\AppData\\Local\\Continuum\\anaconda3\\envs\\mlapi\\python.exe",
+    "python.linting.enabled": true,
+    "python.formatting.provider": "autopep8",
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pycodestyleArgs": [
+        "--ignore=E501"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--enable=F401",
+        "--ignore=E303,E501"
+    ],
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "[html]": {
+        "editor.formatOnSave": false
+    },
+    "python.autoComplete.showAdvancedMembers": true,
+    "python.autoComplete.addBrackets": true,
+    "editor.cursorBlinking": "expand",
+    "editor.renderWhitespace": "boundary",
+    "editor.formatOnSaveTimeout": 1500,
+    "python.formatting.blackArgs": [
+        "--skip-string-normalization",
+        "--line-length",
+        "99"
+    ],
+    "python.jediEnabled": false,
+}
+```
+
+### 3.2. project-root/.env
+
+```shell
+PYTHONPATH = ./com/tmoncorp/data/ml_api;${PYTHONPATH}
+```
+
+* ```project-root/com/tmoncorp/data/ml_api```를 python-path로 지정하고 싶으면 위와같이 설정
+* .env 파일을 project-root에 만든다.
+
+

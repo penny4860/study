@@ -52,3 +52,6 @@ services:
 * dockerfile과 docker-compose.yml을 같은 디렉토리에 넣고 다음 command를 실행
 * docker-compose up -d --build
 
+### 2.3. docker container에 ssh 접속하기
+
+```docker container exec -it $(container 이름) sh```

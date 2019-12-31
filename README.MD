@@ -3,7 +3,7 @@
 ## Todo
 
 * 지속적인 학습 사례 리뷰
-    * https://deview.kr/2019/schedule/286
+    * http://dmqm.korea.ac.kr/activity/seminar/266
 
 * tfjs-efficientnet 구현
     * keras 모델을 tf-js로 변환 : https://www.tensorflow.org/js/tutorials/conversion/import_keras

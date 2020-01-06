@@ -37,6 +37,9 @@
     * 기타 옵션
         * -it : docker container를 ssh처럼사용
         * -rm : container 종료시 container를 파기
+        * -v : volume 지정 (host:docker)
+
+```project-root> sudo docker container run -d -p 50051:50051 -v /home/TMON/jeongjoonsup/index_samples:/app/index_samples faiss/visualsearch:latest```
 
 ### 2.2. docker-compose를 사용한 container 실행방법
 

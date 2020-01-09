@@ -2,6 +2,12 @@
 
 ## Todo
 
+* "Boosting Standard Classification Architectures Through a Ranking Regularizer" 에 나온 FGVR 데이터 셋으로 efficientnet 학습해보기.
+    * efficientnet
+        * gpu memory
+        * inference time
+        * training time
+
 * 지속적인 학습 사례 리뷰
     * http://dmqm.korea.ac.kr/activity/seminar/266
 

@@ -23,13 +23,8 @@
 
 ### 2. 질문
 
-* batch construction 방법이 무슨 말인지 모르겠음.
-    * K=4? : ```batch size=32```중에서 4종류의 class만 sampling 한다는 건가?
-    * 9번 논문에서의 구성방법 알아보자.
-* normalized mutual information 에 의한 retrival 성능 평가
+* normalized mutual information 에 의한 retrival 성능 평가 metric을 어떻게 구현하지?
     * https://scikit-learn.org/stable/modules/generated/sklearn.metrics.normalized_mutual_info_score.html
-* center loss를 사용한 논문 (38) 에서는 softmax는 사용하지 않았나?
-* triplet center loss를 사용한 논문 (8) 에서는 softmax는 사용하지 않았나?
 
 
 ## 내용

@@ -4,13 +4,33 @@
 
 ### 1. 요약
 
+* Softmax loss에 Triplet loss를 regularization 으로 사용하는 네트워크 구조를 제안.
+    * conv feature maps 이후에
+        * (1st head) : GAP -> fc (n_classes) -> softmax
+        * (2nd head) : flatten -> fc (n_embed) -> triplet
+* Triplet loss
+    * batch sample 의 embedding space상에서
+        * anchor sample과 positive sample의 거리는 작게
+        * anchor sample과 negatice sample의 거리는 크게
+    * batch sampling 방식
+        * semi-hard negative sampling 방식이 가장 좋은 성능을 보였음.
+* classification 성능
+    * FGVR 에서는 vanilla softmax와 거의 비슷 (1~2% 차이)
+    * imbalance dataset에서는 꽤 성능향상이 있었음 (6% 이상)
+* feature embedding 성능
+    * vanilla softmax의 feature와의 비교는 없었음.
+
+
 ### 2. 질문
 
-* center loss를 사용한 논문 (38) 에서는 softmax는 사용하지 않았나?
-* triplet center loss를 사용한 논문 (8) 에서는 softmax는 사용하지 않았나?
 * batch construction 방법이 무슨 말인지 모르겠음.
     * K=4? : ```batch size=32```중에서 4종류의 class만 sampling 한다는 건가?
     * 9번 논문에서의 구성방법 알아보자.
+* normalized mutual information 에 의한 retrival 성능 평가
+    * https://scikit-learn.org/stable/modules/generated/sklearn.metrics.normalized_mutual_info_score.html
+* center loss를 사용한 논문 (38) 에서는 softmax는 사용하지 않았나?
+* triplet center loss를 사용한 논문 (8) 에서는 softmax는 사용하지 않았나?
+
 
 ## 내용
 
@@ -115,5 +135,49 @@
     * batch construction procedure
         * ?
 
+#### 4.2. Task Generalization
+
+* imbalanced dataset 으로 실험
+
+#### 4.3. Retrieval Evaluation on FGVR
+
+* 평가방법
+    1) recall
+    2) normalized mutual information
+
+* feature embedding 성능 비교 (Table 5)
+    * batch sampling 방식
+        * Triplet loss + semi-hard sampling
+            * 가장 stable
+        * Triplet loss + hard sampling
+            * resnet에서는 우수하지만, inception에서 매우 unstable
+        * center loss
+            * 가장 unstable
+    * 네트워크 구조
+        * Densnet -> Resnet -> Inception 순으로 좋음
+
+* Triplet + semi-negative sample 을 사용하면 classification 성능이 좋을 수록 retrieval 성능도 좋았음. (Table 6)
+
+#### 4.4.  Ablation Analysis
+
+* Hyperparameter 튜닝 방법
+    * lambda 튜닝
+        * 튜닝에 사용할 데이터셋을 flower-102로 set
+        * 2000 iteration 돌리고 validation set의  classification 성능을 평가
+        * [0.2, 2.0] 사이값이 좋았음
+            * 논문에서는 1.0으로 set
+
+* 2-head 구조의 time complexity
+    * 학습할떄의 batch processing time loss가 1~3% 에 불과했음
+
+#### 4.5. Discussion
+
+* 2-head 구조 (softmax + triplet)로 vanilla softmax의 성능을 outperform
+    * classification 성능
+        * class well-balanced dataset에서는 1~2% 성능향상에 불과했음.
+        * imbalanced dataset에서 macro acc. 에서 성능향상이 있었음. (Table 3)
+    * batch negative sampling
+        * semi hard sampling 방식이 안정적
+    * feature embedding 성능
 
 

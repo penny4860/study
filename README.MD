@@ -28,10 +28,6 @@
 ## 질문
 
 * Boosting Standard Classification Architectures Through a Ranking Regularizer 
-    * batch construction 방법이 무슨 말인지 모르겠음.
-        * K=4? : ```batch size=32```중에서 4종류의 class만 sampling 한다는 건가?
-        * 아래 논문에서의 구성방법 알아보자.
-            * A. Hermans, L. Beyer, and B. Leibe. In defense of the triplet loss for person re-identification. arXiv preprint arXiv:1703.07737, 2017.
     * center loss를 사용한 논문에서는 softmax는 사용하지 않았나?
         * Y. Wen, K. Zhang, Z. Li, and Y. Qiao. A discriminative feature learning approach for deep face recognition. In ECCV. Springer, 2016.
     * triplet center loss를 사용한 논문에서는 softmax는 사용하지 않았나?

@@ -25,7 +25,15 @@
 
 * normalized mutual information 에 의한 retrival 성능 평가 metric을 어떻게 구현하지?
     * https://scikit-learn.org/stable/modules/generated/sklearn.metrics.normalized_mutual_info_score.html
-
+* batch construction 방법이 무슨 말인지 모르겠음.
+    * K=4? : ```batch size=32```중에서 4종류의 class만 sampling 한다는 건가?
+    * ```In defense of the triplet loss for person re-identification``` 에서의 구성방법 알아보자.
+        1) P class를 random으로 선택
+        2) 각 class 별로 K개의 image를 선택
+        3) ```P * K``` anchor sample 에 대해서 hardest positive / hardest negative로 triplet을 구성
+            * hardest positive : anchor와 같은 클래스중 가장 거리가 먼것.
+            * hardest negative : anchor와 다른 클래스중 가장 거리가 가까운 것.
+            
 
 ## 내용
 

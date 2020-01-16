@@ -11,6 +11,13 @@
 
 ## Todo
 
+* CNN 모델 연구
+    * efficientnet 논문리뷰
+    * mobilenet
+    * resnet
+
+* Text 분류기 모델
+
 * "Boosting Standard Classification Architectures Through a Ranking Regularizer" 에 나온 FGVR 데이터 셋으로 efficientnet 학습해보기.
     * efficientnet
         * gpu memory

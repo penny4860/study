@@ -73,7 +73,13 @@ if __name__ == '__main__':
                          num_parallel_calls=AUTOTUNE)
 
     train_ds = prepare_for_training(xy_ds)
-    batch_images, batch_labels = next(iter(train_ds))
-    print(batch_images.shape, batch_labels.shape)
 
+    # Data feed loop
+    it = iter(train_ds)
+    for i in range(100):
+        batch_xs, batch_ys = next(it)
+        print(i, batch_xs.shape, batch_ys.shape)
+
+    # batch_images, batch_labels = next(iter(train_ds))
+    # print(batch_images.shape, batch_labels.shape)
     # model.fit(train_ds)

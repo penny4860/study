@@ -17,6 +17,7 @@
     * training loop 구현방식 : ```model.fit()```
         * callback
         * tf summary
+        * custom loss 사용방법
     * mobilenet 으로 cifar-100 학습해보기
 
 * CNN 모델 연구

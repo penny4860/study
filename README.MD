@@ -40,4 +40,12 @@
 * style transfer
     * https://deview.kr/2019/schedule/309
 
+## Image Embedding 관련 논문
+
+* SoftTriple Loss: Deep Metric Learning Without Triplet Sampling
+* A Theoretically Sound Upper Bound on the Triplet Loss for Improving the Efficiency of Deep Distance Metric Learning
+* Triplet-Center Loss for Multi-View 3D Object Retrieval
+
+
+
 

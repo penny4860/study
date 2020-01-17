@@ -19,14 +19,12 @@ def get_dataset_root():
     return data_dir
 
 
-def process_path(file_path):
-    CLASS_NAMES = np.array([item.name for item in dataset_root.glob('*') if item.name != "LICENSE.txt"])
-
+def process_path(file_path, class_names):
     def get_label(file_path):
         # convert the path to a list of path components
         parts = tf.strings.split(file_path, os.path.sep)
         # The second to last is the class-directory
-        return parts[-2] == CLASS_NAMES
+        return parts[-2] == class_names
 
     def decode_img(img):
         img = tf.image.decode_jpeg(img, channels=3)
@@ -63,10 +61,16 @@ if __name__ == '__main__':
     AUTOTUNE = tf.data.experimental.AUTOTUNE
 
     dataset_root = get_dataset_root()
+    CLASS_NAMES = np.array([item.name for item in dataset_root.glob('*') if item.name != "LICENSE.txt"])
     print(dataset_root)
 
     files_ds = tf.data.Dataset.list_files(str(dataset_root / '*/*'))
-    xy_ds = files_ds.map(process_path, num_parallel_calls=AUTOTUNE)
+
+    # map_func에 argument를 넘길때는 lambda식을 사용하자.
+    # xy_ds = files_ds.map(process_path,
+    #                      num_parallel_calls=AUTOTUNE)
+    xy_ds = files_ds.map(lambda x: process_path(x, CLASS_NAMES),
+                         num_parallel_calls=AUTOTUNE)
 
     train_ds = prepare_for_training(xy_ds)
     batch_images, batch_labels = next(iter(train_ds))

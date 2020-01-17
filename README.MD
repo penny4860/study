@@ -11,6 +11,14 @@
 
 ## Todo
 
+* Tensorflow-2.0 코드 리뷰
+    * dataset API
+    * model 구현 방식
+    * training loop 구현방식 : ```model.fit()```
+        * callback
+        * tf summary
+    * mobilenet 으로 cifar-100 학습해보기
+
 * CNN 모델 연구
     * efficientnet 논문리뷰
     * mobilenet

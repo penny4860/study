@@ -4,10 +4,12 @@ import tensorflow as tf
 print(tf.__version__)
 
 
-def create_model(n_classes):
+def create_model(n_classes, base_model_trainable=False):
     base_model = tf.keras.applications.MobileNetV2(input_shape=(224, 224, 3),
                                                    include_top=False,
                                                    weights='imagenet')
+    base_model.trainable = base_model_trainable
+
     # layer의 output tensor
     x = base_model.layers[-1].output
     x = tf.keras.layers.GlobalAveragePooling2D()(x)

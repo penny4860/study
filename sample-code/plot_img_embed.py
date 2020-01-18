@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from time import time
 import numpy as np
 import matplotlib.pyplot as plt
+import umap.umap_ as umap
+
 from matplotlib import offsetbox
-from sklearn import manifold, datasets
+from sklearn import datasets
 
 
 # Scale and visualize the embedding vectors
@@ -50,16 +51,15 @@ def plot_embedding(features, labels, original_imgs, title=None):
 
 
 if __name__ == '__main__':
-    digits = datasets.load_digits(n_class=6)
-    X = digits.data
-    y = digits.target
-    n_samples, n_features = X.shape
 
-    import umap.umap_ as umap
+    digits = datasets.load_digits(n_class=6)
+
+    images = digits.images      # (N, height, width, ch)
+    features = digits.data      # (N, feature_dims)
+    labels = digits.target      # (N,)
+
     reducer = umap.UMAP(random_state=42)
-    t0 = time()
-    X_tsne = reducer.fit_transform(digits.data)
-    plot_embedding(X_tsne, y, digits.images,
-                   "t-SNE embedding of the digits (time %.2fs)" %
-                   (time() - t0))
+    features_2d = reducer.fit_transform(features)
+
+    plot_embedding(X_tsne, y, images, "embedding of the digits")
     plt.show()

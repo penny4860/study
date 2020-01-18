@@ -55,10 +55,10 @@ if __name__ == '__main__':
     y = digits.target
     n_samples, n_features = X.shape
 
-    tsne = manifold.TSNE(n_components=2, init='pca', random_state=0)
+    import umap.umap_ as umap
+    reducer = umap.UMAP(random_state=42)
     t0 = time()
-    X_tsne = tsne.fit_transform(X)
-
+    X_tsne = reducer.fit_transform(digits.data)
     plot_embedding(X_tsne, y, digits.images,
                    "t-SNE embedding of the digits (time %.2fs)" %
                    (time() - t0))

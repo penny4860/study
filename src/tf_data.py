@@ -63,12 +63,3 @@ if __name__ == '__main__':
 
     xs, ys = next(iter(train_ds))
     print(xs.shape, ys.shape)
-
-
-    from src.model import create_model
-    model = create_model(n_classes=100)
-    model.compile(optimizer=tf.keras.optimizers.Adam(lr=0.01),
-                  loss=tf.keras.losses.CategoricalCrossentropy(from_logits=False),
-                  metrics=['accuracy'])
-    # model.fit(train_ds,
-    #           steps_per_epoch=100)

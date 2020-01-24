@@ -4,7 +4,7 @@
 ## 질문
 
 * EfficientNet
-	* Rmsprop parameter 확인
+	* Rmsprop parameter 확인 : mnasnet 논문 참고할것.
 		* decay 0.9 and momentum 0.9;
 		* batch norm momentum 0.99;
 		* weight decay 1e-5; 
@@ -21,7 +21,6 @@
 		* Do better imagenet models transfer better?
 			* Transfer Learning의 학습 setting 확인할 것.
 		* Proxylessnet
-
 * Boosting Standard Classification Architectures Through a Ranking Regularizer 
     * center loss를 사용한 논문에서는 softmax는 사용하지 않았나?
         * Y. Wen, K. Zhang, Z. Li, and Y. Qiao. A discriminative feature learning approach for deep face recognition. In ECCV. Springer, 2016.

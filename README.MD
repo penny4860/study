@@ -22,6 +22,8 @@
         * Y. Wen, K. Zhang, Z. Li, and Y. Qiao. A discriminative feature learning approach for deep face recognition. In ECCV. Springer, 2016.
     * triplet center loss를 사용한 논문에서는 softmax는 사용하지 않았나?
         * X. He, Y. Zhou, Z. Zhou, S. Bai, and X. Bai. Tripletcenter loss for multi-view 3d object retrieval. arXiv preprint arXiv:1803.06189, 2018
+* ```Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour``` 에서 warmup training으로 object detection / segmentaion task를 fine tuning 한 방법
+
 
 ## Todo
 
@@ -38,8 +40,6 @@
     * efficientnet 논문리뷰
     * mobilenet
     * resnet
-
-* Text 분류기 모델
 
 * "Boosting Standard Classification Architectures Through a Ranking Regularizer" 에 나온 FGVR 데이터 셋으로 efficientnet 학습해보기.
     * efficientnet

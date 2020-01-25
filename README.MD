@@ -4,15 +4,11 @@
 ## 질문
 
 * EfficientNet
-	* Rmsprop parameter 확인 : mnasnet 논문 참고할것.
-		* decay 0.9 and momentum 0.9;
-		* batch norm momentum 0.99;
-		* weight decay 1e-5; 
-		* initial learning rate 0.256 that decays by 0.97 every 2.4 epochs.
 	* FLOPS 는 정확히 어떤 연산을 count하는 걸까?
 	* MBConv?
 	* Squeeze-and-Excitation?
 	* stochastic depth?
+	* batchnorm 에서 momentum의 의미?
 	* 읽어볼 논문
 		* mnasnet
 		* swish activation : Searching for activation functions. 

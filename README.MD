@@ -3,12 +3,21 @@
 
 ## 질문
 
+* EfficientDet
+    * 일반적인 SGD + momentum은 nestrov가 아닌걸까?
+    * BatchNorm parameter
+        * bn-decay / eps / exponential moving average
+        * exponential moving average가 momentum을 말하는 건가?
+    * cosine decay rule?
+    * resnet50과 efficientnet-B3의 inference time
+        * gpu inference time : resnet50이 더 빠름.
+        * cpu inference time : B3가 더 빠름.
+        * 왜 차이가 날까?
 * EfficientNet
 	* FLOPS 는 정확히 어떤 연산을 count하는 걸까?
 	* MBConv?
 	* Squeeze-and-Excitation?
 	* stochastic depth?
-	* batchnorm 에서 momentum의 의미?
 	* 읽어볼 논문
 		* mnasnet
 		* swish activation : Searching for activation functions. 

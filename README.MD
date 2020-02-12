@@ -4,10 +4,6 @@
 ## 질문
 
 * EfficientDet
-    * 일반적인 SGD + momentum은 nestrov가 아닌걸까?
-    * BatchNorm parameter
-        * bn-decay / eps / exponential moving average
-        * exponential moving average가 momentum을 말하는 건가?
     * cosine decay rule?
     * resnet50과 efficientnet-B3의 inference time
         * gpu inference time : resnet50이 더 빠름.

@@ -3,6 +3,16 @@
 
 ## 질문
 
+* yolo3
+	* box decoding
+	    * box decoding 할때 width, height를 구하는 과정이 unstable하지 않을까?
+	        * exp(tw) 가 들어가는 부분
+	    * 다른 논문에서의 decoding 방식 비교
+	    * anchor 사용방식 비교
+	* Coco metric이 기존의 Voc metric과 어떻게 다르지?
+	* retinanet에서 objectness threshold를 어떻게 쓰지?
+	    * yolo3에서는 objectness score를 예측하고 이 score로 thresholding
+	    * retinanet에서는 최대 score class에 thresholding 하는가?
 * EfficientDet
     * cosine decay rule?
     * resnet50과 efficientnet-B3의 inference time

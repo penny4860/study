@@ -6,12 +6,13 @@ DATASET_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), "dataset
 
 # https://finance.yahoo.com/quote/SPY/history?p=SPY
 DEFAULT_FILES = [os.path.join(DATASET_ROOT, "SPY.csv"),
+                 os.path.join(DATASET_ROOT, "DIA.csv"),
                  os.path.join(DATASET_ROOT, "TLT.csv"),
                  os.path.join(DATASET_ROOT, "TIGER200.csv"),
                  os.path.join(DATASET_ROOT, "USD-KRW.csv")]
 
 
-def read_files(csv_files=DEFAULT_FILES, start="2010-05-01", end="2020-05-29"):
+def read_files(csv_files=DEFAULT_FILES, start="2000-05-01", end="2020-06-25"):
     dates = pd.date_range(start, end)
     titles = [f[f.rfind("/")+1:f.find(".csv")] for f in csv_files]
 
